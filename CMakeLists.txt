@@ -26,7 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(redo
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        timetable.h timetable.cpp timetable.ui
+        Timetable.h Timetable.cpp Timetable.ui
         attendance.h attendance.cpp attendance.ui
         phours.h phours.cpp phours.ui
     )
