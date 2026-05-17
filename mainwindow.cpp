@@ -1,6 +1,15 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "timetable.h"
+#include "phours.h"
+
+void MainWindow::on_phours_clicked()
+{
+    // open professor hours window
+    phours *w = new phours(this);
+    w->setWindowTitle("Professor Hours");
+    w->exec();
+}
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,10 +32,7 @@ void MainWindow::on_timetable_clicked()
     w->exec();
 }
 
-void MainWindow::on_phours_clicked()
-{
-    // placeholder for professor hours window
-}
+
 
 void MainWindow::on_attendance_clicked()
 {
