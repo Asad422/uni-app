@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext /Users/asad422/Downloads/FRESHMEN_SOC_Students_Group_2025F.pdf -)",
+      "Bash(cmake ../..)",
+      "Bash(cmake --build .)",
+      "Bash(export PATH=\"/Users/asad422/Qt/Tools/CMake/CMake.app/Contents/bin:$PATH\")"
+    ]
+  }
+}

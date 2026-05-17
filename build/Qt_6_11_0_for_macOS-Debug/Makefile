@@ -201,6 +201,30 @@ redo_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo_autogen.dir/build.make CMakeFiles/redo_autogen.dir/build
 .PHONY : redo_autogen/fast
 
+Timetable.o: Timetable.cpp.o
+.PHONY : Timetable.o
+
+# target to build an object file
+Timetable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/Timetable.cpp.o
+.PHONY : Timetable.cpp.o
+
+Timetable.i: Timetable.cpp.i
+.PHONY : Timetable.i
+
+# target to preprocess a source file
+Timetable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/Timetable.cpp.i
+.PHONY : Timetable.cpp.i
+
+Timetable.s: Timetable.cpp.s
+.PHONY : Timetable.s
+
+# target to generate assembly for a file
+Timetable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/Timetable.cpp.s
+.PHONY : Timetable.cpp.s
+
 attendance.o: attendance.cpp.o
 .PHONY : attendance.o
 
@@ -321,30 +345,6 @@ redo_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/redo_autogen/mocs_compilation.cpp.s
 .PHONY : redo_autogen/mocs_compilation.cpp.s
 
-timetable.o: timetable.cpp.o
-.PHONY : timetable.o
-
-# target to build an object file
-timetable.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/timetable.cpp.o
-.PHONY : timetable.cpp.o
-
-timetable.i: timetable.cpp.i
-.PHONY : timetable.i
-
-# target to preprocess a source file
-timetable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/timetable.cpp.i
-.PHONY : timetable.cpp.i
-
-timetable.s: timetable.cpp.s
-.PHONY : timetable.s
-
-# target to generate assembly for a file
-timetable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/redo.dir/build.make CMakeFiles/redo.dir/timetable.cpp.s
-.PHONY : timetable.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -360,6 +360,9 @@ help:
 	@echo "... redo_autogen"
 	@echo "... redo_autogen_timestamp_deps"
 	@echo "... redo"
+	@echo "... Timetable.o"
+	@echo "... Timetable.i"
+	@echo "... Timetable.s"
 	@echo "... attendance.o"
 	@echo "... attendance.i"
 	@echo "... attendance.s"
@@ -375,9 +378,6 @@ help:
 	@echo "... redo_autogen/mocs_compilation.o"
 	@echo "... redo_autogen/mocs_compilation.i"
 	@echo "... redo_autogen/mocs_compilation.s"
-	@echo "... timetable.o"
-	@echo "... timetable.i"
-	@echo "... timetable.s"
 .PHONY : help
 
 

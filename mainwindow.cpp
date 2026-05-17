@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "timetable.h"
+#include "attendance.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -30,5 +31,7 @@ void MainWindow::on_phours_clicked()
 
 void MainWindow::on_attendance_clicked()
 {
-    // placeholder for attendance window
+    attendance *w = new attendance(this);
+    w->setWindowTitle("Attendance");
+    w->exec();
 }
