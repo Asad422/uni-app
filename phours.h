@@ -38,4 +38,4 @@ private:
     void displayDay(const QString &day);      // show selected day
 };
 
-#endif // PHOURS_H
+#endif

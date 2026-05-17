@@ -3,6 +3,7 @@
 #include <QTableWidgetItem>
 #include <QHeaderView>
 #include <QComboBox>
+#include <QColor>
 
 timetable::timetable(QWidget *parent)
     : QDialog(parent)
@@ -59,7 +60,7 @@ void timetable::displayGroup(const Group &group)
     // clear all cells first
     for (int r = 0; r < 5; r++) {
         for (int c = 0; c < 20; c++) {
-            ui->tableWidget->setSpan(r, c, 1, 1); // reset any merges
+            ui->tableWidget->setSpan(r, c, 1, 1);
             ui->tableWidget->setItem(r, c, new QTableWidgetItem(""));
         }
     }
@@ -72,14 +73,16 @@ void timetable::displayGroup(const Group &group)
 
         if (row < 0 || col < 0 || col >= 20) continue;
 
-        // merge cells based on duration
         int span = l.duration;
-        if (col + span > 20) span = 20 - col; // dont go out of bounds
+        if (col + span > 20) span = 20 - col;
         ui->tableWidget->setSpan(row, col, 1, span);
 
         QString text = l.subject + "\n" + l.room + "\n" + l.teacher;
         QTableWidgetItem *item = new QTableWidgetItem(text);
         item->setTextAlignment(Qt::AlignCenter);
+        item->setBackground(QColor(255, 255, 255)); // white background
+        item->setBackground(QColor(255, 255, 255)); // white background
+        item->setForeground(QColor(0, 0, 0));       // black text
         ui->tableWidget->setItem(row, col, item);
     }
 }

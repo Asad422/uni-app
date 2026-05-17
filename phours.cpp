@@ -4,6 +4,7 @@
 #include <QHeaderView>
 #include <QComboBox>
 
+
 phours::phours(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::phours)
