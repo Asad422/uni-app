@@ -10,6 +10,7 @@ void MainWindow::on_phours_clicked()
     w->setWindowTitle("Professor Hours");
     w->exec();
 }
+#include "attendance.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -36,5 +37,7 @@ void MainWindow::on_timetable_clicked()
 
 void MainWindow::on_attendance_clicked()
 {
-    // placeholder for attendance window
+    attendance *w = new attendance(this);
+    w->setWindowTitle("Attendance");
+    w->exec();
 }
